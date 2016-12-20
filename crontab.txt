@@ -1,1 +1,1 @@
-@daily curl reestr.rublacklist.net/api/ips | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | sort > blacklist.txt
+@daily curl reestr.rublacklist.net/api/ips | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | sort -h > blacklist.txt && git commit blacklist.txt -q -m "blacklist.txt" && git push
